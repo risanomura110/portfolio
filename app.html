@@ -6,7 +6,6 @@
 <mete name="description" content="ポートフォリオサイト">
   <title>ポートフォリオ</title>
 <link rel="stylesheet"href="css/style.css">
-
 </head>
 <body>
   <div class="wrapper">
@@ -28,7 +27,24 @@
 
         <main>
           <h1>オリジナルアプリ</h1>
-          <img src="images/about-photo.jpg" alt="アプリケーション" class="shop-photo">
+
+          <div class="container">
+            <section>
+            <div class="slide">
+            <div class="image_box">
+            <img id="main_image"src="images/image1.jpg">
+            </div>
+            <div class="toolbar">
+              <div class="nav">
+                <div id="prev"></div>
+                <div id="page"></div>
+                <div id="next"></div>
+              </div>
+            </div>
+            </div>
+            </section>
+          </div><!-- /.container -->
+
             <h2>作品 | 01「日本の論点」</h2>​​
             <p>書籍「文藝春秋オピニオン 論点100」のアプリケーションを作成。読者のメリット最大化を考え制作。現状本にはいくつかデメリットが存在しています。そのデメリットをアプリケーションで改善するため制作しました。※書籍の内容について。日本が直面する100の課題を各界の専門家が論じています。</p>
             <h2 class="clear">接続先情報</h2>
@@ -50,6 +66,41 @@
             <p>&copy;Copyright . All rights reserved.</p>
         </footer>
         <!-- フッター -->
+        <script>
+          'use strict';
+          
+          const images = ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg', 'images/image4.jpg', 'images/image5.jpg'
+          ,'images/image6.jpg','images/image7.jpg','images/image8.jpg','images/image9.jpg','images/image10.jpg'];
+          images.forEach(function(item,index){
+            preloadImage(item);
+            // 画像読み込み時間を短くするテクニック
+          });
+          let current = 0;
+          function preloadImage(path){
+            let imgTag=document.createElement('img');
+            imgTag.src=path;
+          }
+          function changeImage(num) {
+              if(current + num >= 0 && current + num < images.length) {
+                  current += num;
+                  document.getElementById('main_image').src = images[current];
+                  pageNum();
+              }
+          };
+          
+          function pageNum() {
+              document.getElementById('page').textContent = `${current + 1}/${images.length}`;
+          }
+          
+          pageNum();
+          
+          document.getElementById('prev').onclick = function() {
+              changeImage(-1);
+          };
+          document.getElementById('next').onclick = function() {
+              changeImage(1);
+          };
+          </script>
   </div>
 </body>
 </html>
