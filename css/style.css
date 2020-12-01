@@ -90,6 +90,9 @@ img{
 .news-item{
   margin: 0;
 }
+.twitter{
+  text-align: center;
+}
 
 /* about.html */
 .shop-photo{
@@ -181,13 +184,13 @@ img {
   margin-right: 0.5rem;
   width: 16px;
   height: 16px;
-  background: url(images/arrow-left.svg) no-repeat;
+  background: url(../images/arrow-left.svg) no-repeat;
 }
 #next {
   margin-left: 0.5rem;
   width: 16px;
   height: 16px;
-  background: url(images/arrow-right.svg) no-repeat;
+  background: url(../images/arrow-right.svg) no-repeat;
 }
 #page {
   color: white;
