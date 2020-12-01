@@ -155,10 +155,13 @@ input[type="submit"] {
   width: 30em;
 }	
 /* carrer.html */
+
 .slide {
   margin : 0 auto;
   border: 1px solid black;
-  width: 720px;
+  max-width: 100%;
+  height: auto;
+  /* width: 720px; */
   background-color: black;
 }
 img {
