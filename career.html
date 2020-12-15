@@ -5,13 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <mete name="description" content="ポートフォリオサイト">
   <title>ポートフォリオ</title>
+  <style>
+    del, ins { text-decoration: none; }
+  </style>
 <link rel="stylesheet"href="css/style.css">
 <link rel="stylesheet" href="./css/normalize.css">
 <link rel="stylesheet" href="./css/main.css">
 <script src="./js/vendor/modernizr.custom.min.js"></script>
 <script src="./js/vendor/jquery-1.10.2.min.js"></script>
 <script src="./js/main.js"></script>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/t.min.js"></script>
+<script src="js/moji.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -32,7 +37,7 @@
      <!-- メイン -->
         <main>
           <h1>経歴</h1>
-           <h2>なぜエンジニアになろうと思ったのか</h2>
+           <h2 id="myText">なぜエンジニアになろうと思<del>た</del>ったのか?</h2>
 
            <p>人力では時間がかかる作業を、短時間で処理できることからプログラミングに興味を持ちました。
 
@@ -42,7 +47,7 @@
             
             今後は、自身の手によって、効率化や売上改善に繋がるシステムなどをつくることで、人々が困っていることをプログラミングによって解決できる人材になりたいと思います。</p>
 
-            <h2>職務経歴</h2>
+            <h2 id="myText2">職務経歴</h2>
             <b>すばる交通株式会社・一般乗用旅客自動車運送事業部</b>
             <p>タクシー乗務員
             2018年10月〜2020年8月<br>
